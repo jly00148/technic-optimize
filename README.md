@@ -1,2 +1,1 @@
-# technic-optimize
-technic-optimize
+# 数组和js以及优化的技巧
