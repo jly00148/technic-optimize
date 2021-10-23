@@ -1,10 +1,12 @@
 /*
  * @Author: jly
  * @Date: 2021-10-23 15:54:17
- * @LastEditTime: 2021-10-23 16:06:28
+ * @LastEditTime: 2021-10-23 16:13:57
  * @FilePath: \technic-optimize\00-foundation\02-fakeArray.js
  */
 
+
+// 一 伪数组基本：
 /*
     *1.伪数组特点：
         1）具有length属性
@@ -16,6 +18,12 @@
         2）调用getElementsByTagName,document.childNodes之类的,它们都返回NodeList对象都属于伪数组
         3）诸如var obj5 = { 99: ‘abc’, length: 100 }这样的数据也是伪数组
 */
+
+// ------------------------------------------------------------------------------------
+
+// 二 如何定义一个伪数组？
+
+var fakeArray = {0:'a',1:'b',length:2} 
 
 // 伪数组转化为真数组：
 // 1） 声明一个空数组，通过遍历伪数组把它们重新添加到新的数组中：
