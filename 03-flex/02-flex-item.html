@@ -1,0 +1,67 @@
+<!--
+ * @Author: jly
+ * @Date: 2021-10-26 00:40:20
+ * @LastEditTime: 2021-10-26 02:24:52
+ * @FilePath: \technic-optimize\03-flex\02-flex-item.html
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-box{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 200px auto;
+            display: flex;
+        }
+        .item{
+            width: 90px;
+            height: 90px;
+            background-color: red;
+            border: 1px solid #000;
+        }
+
+        /* flex-grow */
+            /* 1、flex-grow默认为0，取决于项目在有剩余空间额情况下是否放大即使设置了默认宽度也会放大，
+                假设默认第三个项目中前两个是0，最后一个是1，最后项目会占满剩余的空间
+            */
+            /* .item:nth-child(3){
+                flex-grow: 1;
+            } */
+            
+        /* ------------------------------------------------------------------------------ */
+
+            /* 2、假设第一个项目默认为0，后面其他的为1，则剩余的项目平分剩余的空间 */
+             /* .item:nth-child(2){
+                flex-grow: 1;
+            } */
+
+            /* .item:nth-child(3){
+                flex-grow: 1;
+            } */  
+        
+            
+        /* flex-shrink */
+        /* 默认1，用于决定项目在空间不足时是否缩小，默认项目为1，即空间不足时所有项目等比缩小，即便设置了宽度也会缩小，取0时不缩放，值越大缩小越大 */
+            .item:nth-child(6){
+                flex-shrink: 0;
+            }
+    </style>
+</head>
+<body>
+    <div class="flex-box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">3</div>
+        <div class="item">3</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>

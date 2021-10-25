@@ -1,0 +1,65 @@
+<!--
+ * @Author: jly
+ * @Date: 2021-10-25 17:36:58
+ * @LastEditTime: 2021-10-26 02:12:22
+ * @FilePath: \technic-optimize\03-flex\01-flex-box.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-box{
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 200px auto;
+            display: flex;
+            flex-wrap: nowrap;/*默认不换行，从盒子高度一半开始排列*/
+            flex-wrap: wrap;/*换行，超出盒子宽度压缩子元素宽度*/
+
+        /* 一：flex-direction */
+            
+            flex-direction: row;/* 1、默认的主轴 子元素从左至右'依次'排列*/
+            /* flex-direction: row-reverse; *//* 反转的主轴 子元素从右至左'依次'排列*/
+
+            /* -------------------------------------------------- */
+
+            /* flex-direction: column; */ /* 交叉轴 */
+            /* flex-direction: column-reverse; *//* 反转的交叉轴 */
+
+
+        /* 二：justify-content属性 */
+            /* justify-content：flex-start;(靠左对齐默认) */
+            /* justify-content：flex-end; 靠右对齐 */
+            /* justify-content: center; 居中对齐*/ 
+            /* justify-content：space-around; item之间的距离为两端距离的两倍 */
+            /* justify-content：space-evenly; item之间的距离等于两端的距离 */
+
+        /* 2、交叉轴属性 */
+            align-items: flex-start;/*默认*/
+            /* align-items: center; */
+            /* align-items: flex-end; */
+        }
+        .item{
+            width: 90px;
+            height: 90px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-box">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+    </div>
+</body>
+</html>
