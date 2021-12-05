@@ -1,0 +1,40 @@
+<!--
+ * @Author: jly
+ * @Date: 2021-12-05 17:20:28
+ * @LastEditTime: 2021-12-05 17:44:00
+ * @FilePath: \technic-optimize\04-BFC\02-BFC解决父子元素编剧问题.html
+ * @总结：子盒子的margin-top会传递到父盒子，给父盒子添加一个overflow：hidden属性即可
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .father{
+            width:200px;
+            height: 200px;
+            background-color: red;
+            margin-top: 40px;
+            overflow: hidden;
+        }
+        .son{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+</body>
+</html>

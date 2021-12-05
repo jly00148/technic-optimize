@@ -1,0 +1,33 @@
+<!--
+ * @Author: jly
+ * @Date: 2021-12-05 17:45:44
+ * @LastEditTime: 2021-12-05 22:25:42
+ * @FilePath: \technic-optimize\04-BFC\03-清除浮动.html
+ * @总结：父元素由于子元素浮动不能撑起高度发生坍塌，通过触发父元素的BFC使其其包裹子元素
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father{
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

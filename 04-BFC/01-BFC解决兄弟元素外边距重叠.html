@@ -1,0 +1,42 @@
+<!--
+ * @Author: jly
+ * @Date: 2021-12-05 16:53:32
+ * @LastEditTime: 2021-12-05 17:19:42
+ * @FilePath: \technic-optimize\04-BFC\01-BFC解决兄弟元素外边距重叠.html
+ * @总结得出：任意(两者)给其中的盒子包裹一个父元素，并且给其添加overflow：hidden属性
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-bottom: 10px;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin-top: 10px;
+        }
+        .father{
+            overflow: hidden;
+        }     
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="box1"></div>
+    </div>
+    <div class="father">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
