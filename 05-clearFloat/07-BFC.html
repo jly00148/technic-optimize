@@ -1,0 +1,48 @@
+<!--
+ * @Author: jly
+ * @Date: 2021-12-06 21:33:45
+ * @LastEditTime: 2021-12-08 18:53:26
+ * @FilePath: \technic-optimize\05-clearFloat\07-BFC.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father1{
+            background-color: red;
+            overflow: hidden;
+            /* margin-bottom: 100px; */
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            float: left;
+        }
+        .father2{
+            background-color: yellow;
+            /* margin-top: 100px; */
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: rgb(79, 79, 87);
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="father1">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+    </div>
+    <div class="father2">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+    </div>
+</body>
+</html>

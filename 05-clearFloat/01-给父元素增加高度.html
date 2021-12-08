@@ -1,0 +1,46 @@
+<!--
+ * @Author: jly
+ * @Date: 2021-12-06 21:33:45
+ * @LastEditTime: 2021-12-07 08:25:42
+ * @FilePath: \technic-optimize\05-clearFloat\01-给父元素增加高度.html
+ * @总结：缺点：父元素一般不设高度，由子元素撑起高度
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father1{
+            height: 100px;
+            background-color: red;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            float: left;
+        }
+        .father2{
+            background-color:yellow;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }        
+    </style>
+</head>
+<body>
+    <div class="father1">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+    </div>
+    <div class="father2">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+    </div>
+</body>
+</html>

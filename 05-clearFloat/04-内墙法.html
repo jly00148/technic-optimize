@@ -1,0 +1,54 @@
+<!--
+ * @Author: jly
+ * @Date: 2021-12-07 21:22:00
+ * @LastEditTime: 2021-12-07 21:29:19
+ * @FilePath: \technic-optimize\05-clearFloat\04-内墙法.html
+ * @总结：再第一个父元素增加一个空子元素，并且添加属性clear：left/right/both，第一个和第二个父元素margin-bottom和top可用，缺点是增加了一个空盒子
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father1{
+            background-color: red;
+            margin-bottom: 10px;
+        }
+        .father2{
+            background-color: blue;
+            margin-top: 20px;
+
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            float: left;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        } 
+        .wall{
+            clear: both;
+            /* margin-bottom: 10px; */
+        }      
+    </style>
+</head>
+<body>
+    <div class="father1">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="wall"></div>
+    </div>
+    <div class="father2">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+    </div>
+</body>
+</html>

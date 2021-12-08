@@ -1,0 +1,59 @@
+<!--
+ * @Author: jly
+ * @Date: 2021-12-08 17:49:14
+ * @LastEditTime: 2021-12-08 18:39:48
+ * @FilePath: \technic-optimize\05-clearFloat\05-伪类清除浮动1.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father1{
+            background-color: red;
+            margin-bottom: 10px;
+        }
+        .father2{
+            background-color: blue;
+            margin-top: 10px;
+        }
+        .father1:after{
+            content:'';
+            clear: both;
+            display: block;
+            height: 0;
+            visibility: hidden;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            float: left;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        } 
+        .wall{
+            clear: both;
+            /* margin-bottom: 10px; */
+        }  
+    </style>
+</head>
+<body>
+    <div class="father1">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+        <div class="wall"></div>
+    </div>
+    <div class="father2">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+    </div>
+</body>
+</html>

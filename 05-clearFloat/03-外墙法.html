@@ -1,0 +1,55 @@
+<!--
+ * @Author: jly
+ * @Date: 2021-12-07 20:38:28
+ * @LastEditTime: 2021-12-07 21:22:44
+ * @FilePath: \technic-optimize\05-clearFloat\03-外墙法.html
+ * @外墙法：给第一个和第二个盒子之间添加一个空盒子，并且给这个盒子添加属性:clear:left/right/both,缺点是第一个盒子margin-bottom依然失效，多增加了一个空盒子，第二个盒子margin
+ -top可用
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father1{
+            background-color: red;
+            margin-bottom: 10px;
+        }
+        .father2{
+            background-color: blue;
+            margin-top: 10px;
+
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            float: left;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            float: left;
+        } 
+        .wall{
+            clear: both;
+            /* margin-bottom: 10px; */
+        }      
+    </style>
+</head>
+<body>
+    <div class="father1">
+        <div class="box1">1</div>
+        <div class="box1">2</div>
+    </div>
+    <div class="wall"></div>
+    <div class="father2">
+        <div class="box2">1</div>
+        <div class="box2">2</div>
+    </div>
+</body>
+</html>
