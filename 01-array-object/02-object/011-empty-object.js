@@ -1,7 +1,7 @@
 /*
  * @Author: jly
  * @Date: 2022-01-02 16:24:56
- * @LastEditTime: 2022-01-02 17:02:15
+ * @LastEditTime: 2022-01-03 21:06:04
  * @FilePath: \technic-optimize\01-array-object\02-object\011-empty-object.js
  */
 
@@ -27,4 +27,6 @@ console.log(emptyObj(obj))
 var emptyObj1 = Object.getOwnPropertyNames(obj)
 console.log(emptyObj1.length === 0);
 
-// 方法四：
+// 方法四：Object.keys
+var emptyObj2 = Object.keys(obj)
+console.log(emptyObj2.length === 0);
