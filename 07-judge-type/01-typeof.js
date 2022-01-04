@@ -1,7 +1,7 @@
 /*
  * @Author: jly
  * @Date: 2022-01-04 17:54:54
- * @LastEditTime: 2022-01-04 23:16:02
+ * @LastEditTime: 2022-01-05 00:17:02
  * @FilePath: \technic-optimize\07-judge-type\01-typeof.js
  */
 
@@ -18,3 +18,6 @@ console.log(typeof /^a.6$/);//object
 console.log(typeof new String(123456));//object
 console.log(typeof new Number(123));//object
 console.log(typeof new Boolean(false));//object
+console.log(typeof String);//function
+console.log(typeof Array);//function
+console.log(typeof Boolean);//function
