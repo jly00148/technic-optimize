@@ -1,11 +1,12 @@
 /*
  * @Author: jly
  * @Date: 2022-01-04 17:54:54
- * @LastEditTime: 2022-01-06 21:26:29
+ * @LastEditTime: 2022-01-06 21:44:39
  * @FilePath: \technic-optimize\07-judge-type\01-typeof.js
  */
 
-// typeof用于判断基本数据类型
+// typeof用于判断基本数据类型,但是判断复杂数据类型不准确
+
 console.log(typeof 'String');//string
 console.log(typeof 123456);//number
 console.log(typeof true);//boolean
