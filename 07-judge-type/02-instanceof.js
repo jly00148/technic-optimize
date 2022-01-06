@@ -1,11 +1,12 @@
 /*
  * @Author: jly
  * @Date: 2022-01-05 00:10:16
- * @LastEditTime: 2022-01-05 00:25:52
+ * @LastEditTime: 2022-01-06 23:46:58
  * @FilePath: \technic-optimize\07-judge-type\02-instanceof.js
  */
 
-// instanceof一般用于检测引用数据类型，A instanceof B，如果A是B的实例的话返回true否则返回false
+// instanceof一般用于检测引用数据类型，A instanceof B，如果A是B的实例的话返回true否则返回false，用于判断复杂数据类型(Array,Object,RegExp)
+
 console.log('string' instanceof String);//false
 console.log(10 instanceof Number);//false
 console.log(true instanceof Boolean);//false
